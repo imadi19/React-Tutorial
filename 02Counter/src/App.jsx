@@ -1,0 +1,36 @@
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+
+function App() {
+
+
+  let [counter,setCounter] = useState(15)
+  //let counter = 15;
+  const addValue = () =>{
+    //console.log("Value added",Math.random());
+    counter = counter + 1;
+    setCounter(counter);
+    console.log("Clicked",counter);
+  }
+  const reduceValue = () => {
+    //console.log("clicked",)
+    setCounter(counter-1);
+  }
+  return (
+    <>
+    <h1>Chai aur React</h1>
+    <h2>Counter Value : {counter} </h2>
+    <button
+    onClick={addValue}>Add Value</button>
+    <br/>
+    <button
+    onClick={reduceValue}
+    >Remove value </button>
+    </>
+  )
+}
+
+export default App
